@@ -1,0 +1,79 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #773c3cdc;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+div {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.527);
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 80vw;
+  max-width: 95vw;
+  min-height: 60vh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  td,
+  th {
+    padding-left: 8px;
+  }
+
+  tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #0c0e0b;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  td,
+  th {
+    text-align: center;
+    &.l {
+      text-align: center;
+    }
+    &.c {
+      text-align: center;
+    }
+    &.r {
+      text-align: center;
+    }
+  }
+}
+
+/* :shadowed {
+  box-shadow: -11px 10px 40px 0px rgba(235, 228, 228, 0.75);
+  -webkit-box-shadow: -11px 10px 40px 0px rgba(235, 228, 228, 0.75);
+  -moz-box-shadow: -11px 10px 40px 0px rgba(235, 228, 228, 0.75);
+}
+ */
