@@ -11,34 +11,23 @@ import DataGrid from "../shared/DataGrid.jsx";
 const TopPlayers = () => {
   const {
     data: topPlayers,
-    error,
     isLoading,
-    isRefetching,
   } = useQuery({
     queryKey: ["topPlayers"],
     queryFn: getTopPlayers,
     refetchInterval: 10 * 1000,
-    /*  onSuccess: (data) => {
-      console.log("players retrieved:", data);
-    }, */
   });
 
   const { data: lastStatistic } = useQuery({
     queryKey: ["lastStatistic"],
     queryFn: getLastStatistic,
     refetchInterval: 10 * 1000,
-    /*  onSuccess: (data) => {
-      console.log("statistic retrieved:", data);
-    }, */
   });
-  console.log(topPlayers, lastStatistic, error, isLoading, isRefetching);
 
   // eslint-disable-next-line no-unused-vars
   const { mutate: csvMutation, isPending: isCsvPending } = useMutation({
     mutationFn: getCsv,
     onSuccess: (data) => {
-      console.log(data, "csvString");
-
       const blob = new Blob([data], { type: "text/csv" });
 
       const url = window.URL.createObjectURL(blob);
@@ -55,7 +44,7 @@ const TopPlayers = () => {
       window.URL.revokeObjectURL(url);
     },
   });
-  console.log(isCsvPending, "PENDING");
+
   return (
     <div
       style={{

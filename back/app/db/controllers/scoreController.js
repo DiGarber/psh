@@ -31,9 +31,7 @@ export const getTopScores = async (req, res) => {
 export const generateCSV = (req, res) => {
   try {
     //req.body should be formatted as an array of objects where each object is a row
-    console.log(req.body, "REQ BODY")
     const csv = csvGenerator(req.body?.data ?? []);
-    console.log(csv, "CSV")
     res.status(200).send({ data: csv });
   } catch (error) {
     res.status(500).send({ error });
