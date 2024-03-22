@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: psh
+      MYSQL_DATABASE: psh
+      MYSQL_USER: psh
+      MYSQL_PASSWORD: psh
+    ports:
+      - "6000:3306" # mapping to a different port to avoid conflict with locally run mySQL instance
