@@ -2,6 +2,10 @@
 
 ## Installation & Running the App
 
+### First run
+
+I'd recommend to modify the cron job in back/app/utils/cronJobs to run quickly to populate the DB.
+
 ### Database
 
 This project runs a mySQL instance on a Docker container, to run it you need to open up a terminal and move into the "db" directory in this project. Now run the following command:
