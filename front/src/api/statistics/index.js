@@ -38,7 +38,7 @@ export const getLastStatistic = async () => {
       ?.replaceAll("T", " ")
       .replaceAll("Z", "")
       .replaceAll(".000", "");
-    return timestamp;
+    return timestamp ?? "";
   } catch (error) {
     console.log("Error retrieving last statistic", error);
   }

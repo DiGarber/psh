@@ -28,6 +28,7 @@ const TopPlayers = () => {
   const { mutate: csvMutation, isPending: isCsvPending } = useMutation({
     mutationFn: getCsv,
     onSuccess: (data) => {
+      if(!data) {return}
       const blob = new Blob([data], { type: "text/csv" });
 
       const url = window.URL.createObjectURL(blob);
