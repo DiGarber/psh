@@ -12,6 +12,8 @@ docker-compose up -D
 
 This instance should not have any issues with your local instance of mySQL since it is mapped to not use the default mySQL port. You will need to install docker if you haven't previously.
 
+If for any reason you decide to not run de DB with Docker, see that you change the port in the Sequelize configuration to your default mySQL port.
+
 ### Frontend and backend
 
 In the "back" directory run the following script:
